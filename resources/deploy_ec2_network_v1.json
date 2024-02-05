@@ -15,7 +15,7 @@
   "Mappings": {
     "RegionMap": {
       "eu-west-2": {
-        "micro": "ami-0e80a462ede03e653"
+        "micro": "ami-0954e850752faa12a"
       }
     }
   },
