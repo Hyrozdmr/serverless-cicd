@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -11,10 +11,25 @@
     </style>
     <script>
       async function handleClick() {
-        let response = await fetch("https://0790a90gii.execute-api.eu-west-2.amazonaws.com/hyr-lambda");
-        let text = await response.text();
-        document.getElementById("response").innerHTML = text;
-        document.getElementById("img").src = 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9';
+        try {
+          // Fetch data from API
+          let response = await fetch("https://0790a90gii.execute-api.eu-west-2.amazonaws.com/hyr-lambda");
+
+          // Check if the response is OK
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+
+          // Get the response text
+          let text = await response.text();
+
+          // Update the HTML content and image
+          document.getElementById("response").innerHTML = text;
+          document.getElementById("img").src = 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9';
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          document.getElementById("response").innerHTML = 'Failed to load data.';
+        }
       }
     </script>
   </head>
