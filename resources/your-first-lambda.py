@@ -6,7 +6,7 @@ def lambda_handler(event, context):
         "headers": {
             "Access-Control-Allow-Origin": "*",
         },
-        "body": "name1, name2, name3 & name4! You have successfully invoked your first Lambda. Great job!"
+        "body": "Hayri&Daria! You have successfully invoked your first Lambda. Great job!"
     }
 
     return response
