@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -11,14 +11,10 @@
     </style>
     <script>
       async function handleClick() {
-        try {
-          let response = await fetch("https://YOUR_LAMBDA_URL_HERE");
-          let text = await response.text();
-          document.getElementById("response").innerHTML = text;
-          document.getElementById("img").src = 'https://images.unsplash.com/photo-1673728218157-b316914d636c';
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
+        let response = await fetch("https://YOUR_LAMBDA_URL_HERE");
+        let text = await response.text();
+        document.getElementById("response").innerHTML = text;
+        document.getElementById("img").src = 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9';
       }
     </script>
   </head>
@@ -32,7 +28,6 @@
         <span>Hello</span>
         <span id="response">all! What happens when you click on the button below?</span>
       </h1>
-
       <button type="button" onclick="handleClick()">Click me</button>
       <br>
       <br>
@@ -40,7 +35,7 @@
         id="img"
         width="1000"
         height="1000"
-        src="https://images.unsplash.com/photo-1673728218157-b316914d636c"
+        src="https://images.unsplash.com/photo-1545906785-38f53f99e380"
         alt="A descriptive image"
       >
     </div>
