@@ -1,29 +1,40 @@
-<html>
-  <script>
-    async function handleClick() {
-      let response = await fetch("https://YOUR_LAMBDA_URL_HERE");
-      let text = await response.text();
-      document.getElementById("response").innerHTML = text;
-      document.getElementById("img").src = 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9';
-    }
-  </script>
+<!DOCTYPE html>
+<html lang="en"> <!-- Added lang attribute and DOCTYPE declaration -->
+  <head> <!-- Added <head> section -->
+    <meta charset="UTF-8"> <!-- Added character encoding declaration -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag for responsive design -->
+    <title>Document</title> <!-- Added a <title> element -->
+    <script>
+      async function handleClick() {
+        let response = await fetch("https://YOUR_LAMBDA_URL_HERE");
+        let text = await response.text();
+        document.getElementById("response").innerHTML = text;
+        document.getElementById("img").src = 'https://images.unsplash.com/photo-1540573133985-87b6da6d54a9';
+      }
+    </script>
+  </head>
   <body>
-    <div align="center">
-      <br /><br /><br /><br />
+    <div style="text-align: center;"> <!-- Replaced deprecated align attribute with CSS -->
+      <!-- Replaced self-closing <br /> with <br> -->
+      <br>
+      <br>
+      <br>
+      <br>
       <h1>
-        Hello </span
-        ><span id="response">all! What happens when you click on the button below?</span>
+        <span>Hello</span> <!-- Removed mismatched closing tag -->
+        <span id="response">all! What happens when you click on the button below?</span>
       </h1>
 
-      <button onclick="handleClick()">Click me</button><br />
-      <br /><br />
+      <button type="button" onclick="handleClick()">Click me</button> <!-- Added type attribute to <button> -->
+      <br>
+      <br>
       <img
         id="img"
         width="1000"
         height="1000"
         src="https://images.unsplash.com/photo-1529247833802-700f53170380"
-      />
+        alt="A descriptive image" <!-- Added alt attribute to <img> -->
+      >
     </div>
   </body>
 </html>
-
