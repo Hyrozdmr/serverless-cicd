@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Added lang attribute and DOCTYPE declaration -->
+<html lang="en"> <!-- Added lang attribute -->
   <head> <!-- Added <head> section -->
     <meta charset="UTF-8"> <!-- Added character encoding declaration -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag for responsive design -->
-    <title>Document</title> <!-- Added a <title> element -->
+    <title>Index Page</title> <!-- Added a <title> element -->
+    <style>
+      .centered {
+        text-align: center; /* Moved inline style here */
+      }
+    </style>
     <script>
       async function handleClick() {
         let response = await fetch("https://YOUR_LAMBDA_URL_HERE");
@@ -14,18 +19,17 @@
     </script>
   </head>
   <body>
-    <div style="text-align: center;"> <!-- Replaced deprecated align attribute with CSS -->
-      <!-- Replaced self-closing <br /> with <br> -->
+    <div class="centered"> <!-- Replaced inline style with class -->
       <br>
       <br>
       <br>
       <br>
       <h1>
-        <span>Hello</span> <!-- Removed mismatched closing tag -->
+        <span>Hello</span>
         <span id="response">all! What happens when you click on the button below?</span>
       </h1>
 
-      <button type="button" onclick="handleClick()">Click me</button> <!-- Added type attribute to <button> -->
+      <button type="button" onclick="handleClick()">Click me</button>
       <br>
       <br>
       <img
