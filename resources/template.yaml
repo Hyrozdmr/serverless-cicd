@@ -4,9 +4,9 @@ Resources:
   MyLambdaFunction:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Handler: index.handler
+      Handler: your-first-lamda.lambda_handler  
       Runtime: python3.8
-      CodeUri: .
+      CodeUri: s3://hyr-bucket/deployment.zip 
       Environment:
         Variables:
           TABLE_NAME: 'MyTable'
