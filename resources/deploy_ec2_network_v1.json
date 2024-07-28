@@ -317,8 +317,8 @@
                   "Effect": "Allow",
                   "Action": "s3:*",
                   "Resource": [
-                    "arn:aws:s3:::hyr-bucket-name",
-                    "arn:aws:s3:::hyr_bucket-name/*"
+                    "arn:aws:s3:::hyr-bucket",
+                    "arn:aws:s3:::hyr_bucket/*"
                   ]
                 }
               ]
